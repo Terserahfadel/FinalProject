@@ -33,7 +33,7 @@ Feature: Add Product
         And user can see warning above the wrong input field
         Examples:
         | case ID | product_name          | product_price         |
-        | WAP02   | special character     | valid price           |
-        | WAP03   | valid product name    | negative number       |
-        | WAP04   | empty                 | valid price           |
-        | WAP05   | valid product name    | 0                     |
+        | AAP02   | special character     | valid price           |
+        | AAP03   | valid product name    | negative number       |
+        | AAP04   | empty                 | valid price           |
+        | AAP05   | valid product name    | 0                     |
