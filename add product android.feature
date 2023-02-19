@@ -20,7 +20,7 @@ Feature: Add Product
     Scenario Outline: User can not upload product
         Given user already login
         And user already in home page
-        When user click "jual" button
+        When user tap "jual" button
         And user input product name with "<product_name>"
         And user input product price with "<product_price>"
         And user input product description
