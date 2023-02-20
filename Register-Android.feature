@@ -13,7 +13,8 @@ Feature: Register
     And user input "Jakarta" into City fields
     And user input "Tebet" into Address fields
     And user taps on 'Register' button
-    Then user can see notification "Account created successfully" and user redirected to account page
+    Then user can see notification "Account created successfully" 
+    And user redirected to account page
 
 @Negative_case
   Scenario Outline: User want to register using account data that have been registered

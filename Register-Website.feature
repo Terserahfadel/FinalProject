@@ -9,7 +9,8 @@ Feature: Register
     And user input "hi.julea@gmail.com" on Email fields
     And user input "Password*1" on Password fields
     And user click on 'Register' button 
-    Then user can see notification "Account created successfully" and a confirm email should be send to the registered email address
+    Then user can see notification "Account created successfully" 
+    And a confirm email should be send to the registered email address
 
 @Negative_case
   Scenario: User want to register using account that have been registered
