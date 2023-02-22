@@ -9,7 +9,7 @@ Feature: Register
     And user input data into Email fields 
     And input data into Password fields 
     And user click on 'Register' button 
-    Then user can see notification "Account created successfully" 
+    Then user can see account created successfully 
     And a confirm email should be send to the registered email address
 
 @Negative_case
@@ -21,7 +21,7 @@ Feature: Register
     And user input data into Email fields with "<Email>"
     And input data into Password fields with "<Password>"
     And user click on 'Register' button 
-    Then user can see Account should not be created, instead a proper field  warning message to provide valid email address should be displayed
+    Then user can see account should not be created, instead a proper warning message should be displayed
 
     Examples:
         | Case ID |  Email                     | Password       |

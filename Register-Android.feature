@@ -13,7 +13,7 @@ Feature: Register
     And user input data into City fields
     And user input fata into Address fields
     And user taps on 'Register' button
-    Then user can see notification account created successfully
+    Then user can see account created successfully
     And user redirected to account page
 
 @Negative_case
