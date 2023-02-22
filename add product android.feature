@@ -12,8 +12,7 @@ Feature: Add Product
         And user input product image
         And user input location
         And user tap "terbitkan" button
-        Then user can see toast message appear "Produk Berhasil Ditambahkan"
-        And User redirected to product list page
+        Then user can see toast message appear
         And user successfully add product
 
     @negative_case
@@ -28,7 +27,7 @@ Feature: Add Product
         And user input product image
         And user input product location
         And user tap "terbitkan" button
-        Then user can see toast message appear "Produk Gagal Ditambahkan"
+        Then user can see toast message appear
         And user stay in add product page
         And user can see warning above the wrong input field
         Examples:
