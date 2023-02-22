@@ -30,6 +30,7 @@ Feature: Register
     And user input fata into Address fields
     And user taps on 'Register' button
     Then user can see account should not be created, instead a proper warning message should be displayed
+   
     Examples:
         | Case ID |  Email                     | Password        | Phone_Number          |
         | AR02    |  That have been registered | Valid password  | Valid phone number    |

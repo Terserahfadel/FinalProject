@@ -23,6 +23,7 @@ Feature: Register
     And user click on 'Register' button 
     Then user can see account should not be created, instead a proper warning message should be displayed
 
+
     Examples:
         | Case ID |  Email                     | Password       |
         | WR02    |  That have been registered | Valid password |
