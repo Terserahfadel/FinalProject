@@ -21,7 +21,7 @@ Feature: Register
     And user input data into Email fields with "<Email>"
     And input data into Password fields with "<Password>"
     And user click on "Register" button 
-    Then user can see account should not be created, instead a proper warning message should be displayed
+    Then user can see account should not be created, warning message should be displayed
 
     Examples:
         | Case ID |  Email                     | Password       |

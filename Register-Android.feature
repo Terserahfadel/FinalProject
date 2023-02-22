@@ -29,7 +29,7 @@ Feature: Register
     And user input data into City fields
     And user input fata into Address fields
     And user taps on "Register" button
-    Then user can see account should not be created, instead a proper warning message should be displayed
+    Then user can see account should not be created, warning message should be displayed
    
     Examples:
         | Case ID |  Email                     | Password        | Phone_Number          |
