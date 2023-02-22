@@ -27,5 +27,5 @@ Feature: Register
         | Case ID |  Email                     | Password       |
         | WR02    |  That have been registered | Valid password |
         | WR03    |  Invalid email parameter   | Valid password |
-        | WR04    |  Valid Email               | Empty password |
+        | WR04    |  Valid email               | Empty password |
         | WR05    |  Special character         | Valid password |
