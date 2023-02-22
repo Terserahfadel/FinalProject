@@ -1,49 +1,50 @@
 Feature: Edit Profile Mobile App Secondhand
 
     @positive_case
-    Scenario: User want to change Profile data
+    Scenario: User want to change Name
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User click the Pencil icon
         And User can see detail information of Profile User
-        And User add the Profile Photo
         And User fill Nama field
-        And User fill No. Handphone field
-        And User fill Kota field
-        And User fill Alamat field
-        And User fill Email field
-        And User changes Password
         And User click Simpan button
-        Then User can see the success toast message
+        Then User can see the success message
 
     @negative_case
-    Scenario Outline: User want to change Profile data by empty all fields
+    Scenario: User want to empty Nama fields
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User click the Pencil icon
-        And User add the Profile Photo
-        And User fill the Profil form with "<condition>"
+        And User can see detail information of Profile User
+        And User empty Nama field
         And User click Simpan button
         Then User can see the failed validation
 
-        Examples:
-
-        |      case_id    |         condition          |
-        |TC.Prof.003.002  | empty all fields           |
-        |TC.Prof.003.003  | input wrong old password   |
 
     @negative_case
     Scenario Outline: User want to change Mobile Number 
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User click the Pencil icon
-        And User add the Profile Photo
-        And User fill the Profil form with "<condition>"
+        And User can see detail information of Profile User
+        And User fill the No. Handphone field with "<condition>"
         And User click Simpan button
         Then User can see the failed validation
 
         Examples:
 
-        |      case_id    |                          condition                              |
-        |TC.Prof.003.004  | fill No. Handphone field with one number                        |
-        |TC.Prof.003.005  | fill No. Handphone field with alphabets and special character   |
+        |      case_id    |                          condition                         |
+        |TC.Prof.003.003  | fill Nomor HP field with one number                        |
+        |TC.Prof.003.004  | fill Nomor HP field with alphabets and special character   |
+
+    @negative_case
+    Scenario: User want to change Password with input the Wrong Old Password
+        Given User already Login on Secondhand Mobile App
+        And User already in Akun Saya page
+        When User click the Pencil icon
+        And User can see detail information of Profile User
+        And User fill the Kata Sandi Lama field with wrong Password
+        And User fill the Kata Sandi Baru field
+        And User fill the Konfirmasi Kata Sandi field according to the new password that has been entered
+        And User click Simpan button
+        Then User can see the failed message
