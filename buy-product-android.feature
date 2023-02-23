@@ -16,6 +16,7 @@ Feature: Buying product
     And user aready on the homepage
     When user tap a product
     And user tap "Saya tertarik dan ingin nego" button
+    And user left input price empty
     And user tap "Kirim" button
     Then user can see failed notification
 
