@@ -7,45 +7,44 @@ Feature: Edit Profile Website App Secondhand
         When User click the Profile icon
         And User click Profile menu
         And User can see Profile form
-        And User add the Profile Photo
-        And User fill Nama field
-        And User fill Kota field
-        And User fill Alamat field
-        And User fill No. Handphone field
+        And User input Name 
+        And User input City
+        And User input Address
+        And User input Mobile Number
         And User click Submit button
-        Then User can see the success toast message
+        Then User can see the success message
 
     @negative_case
-    Scenario Outline: User want to change Profile data by not add Profile Photo
+    Scenario Outline: User want to empty Name
         Given User already Login on Secondhand Web App
         And User already in homepage Secondhand Web App
         When User click the Profile icon
         And User click Profile menu
         And User can see Profile form
-        And User doesn't add Profile Photo
-        And User fill Edit Profile form with "<condition>"
+        And User empty Name 
+        And User input City
+        And User input Address
+        And User input Mobile Number
         And User click Submit button
         Then User can see the failed validation
 
-        Examples:
-        |      case_id     |     condition      |
-        |TC.Edpro.003.002  | fill all fields    |
-        |TC.Edpro.003.003  | empty all fields   |
-
     @negative_case
-    Scenario Outline: User want to change Profile data by not add Profile Photo
+    Scenario Outline: User want to change Mobile Number
         Given User already Login on Secondhand Web App
         And User already in homepage Secondhand Web App
         When User click the Profile icon
         And User click Profile menu
         And User can see Profile form
-        And User add the Profile Photo
-        And User fill Edit Profile form with "<condition>"
+        And User input Name 
+        And User input City
+        And User input Address
+        And User input Mobile Number with "<condition>"
         And User click Submit button
         Then User can see the failed validation
 
         Examples:
 
-        |      case_id     |                          condition                              |
-        |TC.Edpro.003.004  | fill No. Handphone field with one number                        |
-        |TC.Edpro.003.005  | fill No. Handphone field with alphabets and special character   |
+        |      case_id     |                condition               |
+        |TC.Edpro.003.003  | empty field                            |
+        |TC.Edpro.003.004  | input one number                       |
+        |TC. Edpro.003.005 | input alphabets and special character  |
