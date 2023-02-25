@@ -11,7 +11,7 @@ Feature: Add Product
         And user input product category
         And user input product image
         And user click "terbitkan" button
-        Then user can see toast message appear
+        Then user can see success toast message appear
         And User redirected to product list page
         And user successfully add product
 
@@ -26,7 +26,7 @@ Feature: Add Product
         And user input product category
         And user input product image
         And user click "terbitkan" button
-        Then user can see toast message appear
+        Then user can see failed toast message appear
         And user stay in add product page
         And user can see warning above the wrong input field
         Examples:
