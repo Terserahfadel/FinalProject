@@ -23,7 +23,7 @@ Scenario: Login with correct email and password (when profile is't complete)
     And User input Email
     And User input Password
     And User click on the "Login" button
-    Then System should be displayed popup "Login Berhasil"
+    Then System should display a successful login popup
     And System should be navigated user to Profile Form page
 
 
@@ -37,7 +37,7 @@ Scenario: Login without email format
     And User input Password
     And User click on the "Login" button
     Then User can't login
-    And System should be displayed popup "Please include an '@' in the email address. 'oktaapriyanti874' is missing an '@' "
+    And System should be displayed alert notification
 
 @Negative_case
 Scenario: Login with unregister email
@@ -48,7 +48,7 @@ Scenario: Login with unregister email
     And User input Password
     And User click on the "Login" button
     Then User can't login
-    And System should be displayed popup "akun tidak ditemukan"
+    And System should be displayed not found account notification
 
 @Negative_case
 Scenario: Login without fill Email and Password field
@@ -60,4 +60,5 @@ Scenario: Login without fill Email and Password field
     And User doesn't input Password
     And User click on the "Login" button
     Then User can't login 
-    And System should be displayed error message "Masukan alamat email yang valid"
+    And System should be appeared popup notification empty email and password 
+

@@ -24,7 +24,7 @@ Scenario: Login with unregister email
     And User input Password
     And User click on the "Masuk" button
     Then User can't be login
-    And System should be appeared popup notification "Email belum terdaftar"
+    And System should be appeared failed popup notification
      
 
 @Negative_case
@@ -38,7 +38,7 @@ Scenario: Login without email format
     And User input Password
     And User click on the "Masuk" button
     Then User can't be login 
-    And System should be appeared alert notification "email tidak valid" in email section
+    And System should be appeared alert failed notification in email section
 
 
 @Negative_case
@@ -53,7 +53,7 @@ Scenario: Login with correct email and empty password
     And User click on the "Masuk" button
     Then User can't be login
     And User should be able to see empty Password field
-    And System should be appeared popup notification "password tidak boleh kosong" in password section
+    And System should be appeared popup notification empty password in password section
 
 
 @Negative_case
@@ -67,4 +67,4 @@ Scenario: Login with empty email and password
     And User doesn't input Password
     And User click on the "Masuk" button
     Then User can't be login
-    And System should be displayed popup notification only appeared ini email section
+    And System should be appeared popup notification empty email and password
