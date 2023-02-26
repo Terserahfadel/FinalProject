@@ -24,8 +24,8 @@ Feature: Register
     Then user can see account should not be created, warning message should be displayed
 
     Examples:
-        | Case ID |  Email                     | Password       |
-        | WR02    |  That have been registered | Valid password |
-        | WR03    |  Invalid email parameter   | Valid password |
-        | WR04    |  Valid email               | Empty password |
-        | WR05    |  Special character         | Valid password |
+        | Case ID | Email                     | Password       |
+        | WR02    | That have been registered | Valid password |
+        | WR03    | Invalid email parameter   | Valid password |
+        | WR04    | Valid email               | Empty password |
+        | WR05    | Special character         | Valid password |
