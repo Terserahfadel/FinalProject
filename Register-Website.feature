@@ -8,7 +8,7 @@ Feature: Register
     And user input data into Email fields with "<Email>"
     And user input data into Password fields with "<Password>"
     And user click on Register button 
-    Then user can see "<Notification>"
+    Then user can see the notification "<Notification>"
 
     Examples:
     | Case ID | Email                     | Password         | Notification     |

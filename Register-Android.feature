@@ -12,7 +12,7 @@ Feature: Register
     And user input data into City fields
     And user input fata into Address fields
     And user taps on Register button
-    Then user can see "<Notification>"
+    Then user can see the notification "<Notification>"
    
     Examples:
     | Case ID | Email                     | Password         | Phone Number         | Notification     |
