@@ -16,7 +16,7 @@ Feature: Add Product
         And user successfully add product
 
     @negative_case
-    Scenario Outline: User can not upload product
+    Scenario Outline: User can successfully or failed upload product due to the process
         Given user already login
         And user already in home page
         When user tap jual button
@@ -27,13 +27,13 @@ Feature: Add Product
         And user input product image
         And user input product location
         And user tap terbitkan button
-        Then user can see failed toast message appear
-        And user stay in add product page
-        And user can see warning above the wrong input field
+        Then user can see "<toast>" toast message appear 
+        And the page should be "<page>"
+        And user can see "<warning>" appear above the input field
         Examples:
-        | case ID | product_name          | product_price         |
-        | AAP01   | valid product name    | valid price
-        | AAP02   | special character     | valid price           |
-        | AAP03   | valid product name    | negative number       |
-        | AAP04   | empty                 | valid price           |
-        | AAP05   | valid product name    | 0                     |
+        | case ID | product_name          | product_price         | toast   | page                      | warning           |
+        | AAP01   | valid product name    | valid price           | success | redirected to home page   | no warning        |
+        | AAP02   | special character     | valid price           | failed  | stay in add product page  | warning           |
+        | AAP03   | valid product name    | negative number       | failed  | stay in add product page  | warning           |
+        | AAP04   | empty                 | valid price           | failed  | stay in add product page  | warning           |
+        | AAP05   | valid product name    | 0                     | failed  | stay in add product page  | warning           |

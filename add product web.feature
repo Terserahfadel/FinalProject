@@ -27,13 +27,13 @@ Feature: Add Product
         And user input product category
         And user input product image
         And user click terbitkan button
-        Then user can see success or failed toast message appear due to the process
-        And user stay in add product page or redirect to home page due to the process
-        And user can see warning above the wrong input field or not due to the process
+        Then user can see "<toast>" toast message appear 
+        And the page should be "<page>"
+        And user can see "<warning>" above the input field
         Examples:
-        | case ID | product_name          | product_price         |
-        | WAP01   | valid product name    | valid price           |
-        | WAP02   | special character     | valid price           |
-        | WAP03   | valid product name    | negative number       |
-        | WAP04   | empty                 | valid price           |
-        | WAP05   | valid product name    | 0                     |
+        | case ID | product_name          | product_price         | toast   | page                      | warning           |
+        | WAP01   | valid product name    | valid price           | success | redirected to home page   | no warning        |
+        | WAP02   | special character     | valid price           | failed  | stay in add product page  | warning           |
+        | WAP03   | valid product name    | negative number       | failed  | stay in add product page  | warning           |
+        | WAP04   | empty                 | valid price           | failed  | stay in add product page  | warning           |
+        | WAP05   | valid product name    | 0                     | failed  | stay in add product page  | warning           |
