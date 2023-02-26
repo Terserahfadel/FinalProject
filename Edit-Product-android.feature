@@ -1,58 +1,36 @@
 Feature: Edit Product
 
     @positive_case
-    Scenario: user wants to change product name
+    Scenario Outline: user can edit product
     Given user already login on app
     And user already on homepage
-    When user tap "daftar jual saya" icon on the top right
+    When user tap daftar jual saya icon on the top right
     And select a product that  has been published
-    And user tap "edit" button
-    And user input a new name for product
-    And user tap "terbitkan" button
+    And user tap edit button
+    And user input product name with "<product-name>"
+    And user input product price with "<product-price>"
+    And user tap terbitkan button
     Then user can see success notification
+    Examples:
+        | case_id  | product-name      | product-price     |
+        | Value 1  | new product name  | keep price        |
+        |          | keep product name | new product price |
 
-    @positive_case
-    Scenario: user want to change price product
-    Given user already login on app
-    And user already in homepage
-    When user tap "daftar jual saya" icon on the top right
-    And select a product that  has been published
-    And user tap "edit" button
-    And user input a new price for product
-    And user tap "terbitkan" button
-    Then user can see success notification
 
     @negative_case
-    Scenario: user wants to change the product name with special character only
+    Scenario Outline: user cannot edit product
     Given user already login on app
     And user already on homepage
-    When user tap "daftar jual saya" icon on the top right
+    When user tap daftar jual saya icon on the top right
     And select a product that  has been published
-    And user tap "edit" button
-    And user input a new name for product with only special character
-    And user tap "terbitkan" button
+    And user tap edit button
+    And user input product name with "<product-name>"
+    And user select product category with "<select-categori>"
+    And user input product price with "<product-price>"
+    And user tap terbitkan button
     Then user can see failed notification
-
-    @negative_case
-    Scenario: user want to change product category to uncategorized
-    Given user already login on app
-    And user already in homepage
-    When user tap "daftar jual saya" icon on the top right
-    And select a product that  has been published
-    And user tap "edit" button
-    And user selects product category "pilih kategori"
-    And user tap "terbitkan" button
-    Then user can see failed notification
-    And Toast message appear "please select a product category"
-
-    @negative_case
-    Scenario: user want to change price producct with letters
-    Given user already login on app
-    And user already on homepage
-    When user tap "daftar jual saya" icon on the top right
-    And select a product that  has been published
-    And user tap "edit" button
-    And user input a new product price with letters
-    And user tap "terbitkan" button
-    Then user can see failed notification
-    And Toast message appear "can not input product price with letters"
+    Examples:
+        | case_id  | product-name       | select-category     | product-price  |
+        | Value 1  | special character  | keep category       | keep price     |
+        |          | keep product name  | uncategorized       | keep price     |
+        |          | keep product name  | keep category       | letters        |
