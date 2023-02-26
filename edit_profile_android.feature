@@ -8,7 +8,7 @@ Feature: Edit Profile Mobile App Secondhand
         And User input Name with "<Name>"
         And User input Mobile Number "<Mobile_Number>"
         And User taps Simpan button
-        Then User can see the success notification "<Notification>"
+        Then User can see the notification "<Notification>"
 
         Examples:
 
