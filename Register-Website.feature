@@ -8,10 +8,10 @@ Feature: Register
     And user input data into Email fields with "<Email>"
     And user input data into Password fields with "<Password>"
     And user click on Register button 
-    Then user can see the notification "<Notification>"
+    Then user can see "<Result>" notification
 
     Examples:
-    | Case ID | Email                     | Password         | Notification     |
+    | Case ID | Email                     | Password         | Result           |
     | WR01    | Correct email             | Correct password | Register success |
     | WR02    | Registered email          | Correct password | Register failed  |
     | WR03    | Incorrect email parameter | Correct password | Register failed  |
