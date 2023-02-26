@@ -29,7 +29,7 @@ Feature: Add Product
         And user click terbitkan button
         Then user can see "<toast>" toast message appear 
         And the page should be "<page>"
-        And user can see "<warning>" above the input field
+        And user can see "<warning>" appear above the input field
         Examples:
         | case ID | product_name          | product_price         | toast   | page                      | warning           |
         | WAP01   | valid product name    | valid price           | success | redirected to home page   | no warning        |

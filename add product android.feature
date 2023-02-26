@@ -16,6 +16,7 @@ Feature: Add Product
         And user successfully add product
 
     @negative_case
+    
     Scenario Outline: User can successfully or failed upload product due to the process
         Given user already login
         And user already in home page
