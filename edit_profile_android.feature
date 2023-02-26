@@ -18,7 +18,7 @@ Feature: Edit Profile Mobile App Secondhand
         | AEP03            | valid name   | one number                      | failed            |
         | AEP04            | valid name   | alphabets and special character | failed            |
 
-    Scenario: User can failed do the Edit Password process
+    Scenario: User want to change Password with input wrong Old Password
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User click the Pencil icon
