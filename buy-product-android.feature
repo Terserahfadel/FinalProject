@@ -2,7 +2,7 @@ Feature: Buying product
 
   @Positive_case
   Scenario: user want to buy a product
-    Given user already login on the website
+    Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
@@ -12,7 +12,7 @@ Feature: Buying product
 
   @Negative_case
   Scenario: user want to buy a product without input price
-    Given user already login on the website
+    Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
@@ -21,8 +21,8 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with twice
-    Given user already login on the website
+  Scenario: user want to buy a product twice
+    Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
@@ -34,8 +34,8 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with add zero price
-    Given user already login on the website
+  Scenario: user want to buy a product with zero price
+    Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
@@ -44,8 +44,8 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with add string character price
-    Given user already login on the website
+  Scenario: user want to buy a product with string character on price
+    Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button

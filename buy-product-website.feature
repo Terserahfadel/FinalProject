@@ -21,7 +21,7 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with twice
+  Scenario: user want to buy a product twice
     Given user already login
     And user aready on the homepage
     When user click a product
@@ -34,7 +34,7 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with add zero price
+  Scenario: user want to buy a product with zero price
     Given user already login
     And user aready on the homepage
     When user click a product
@@ -44,7 +44,7 @@ Feature: Buying product
     Then user can see failed notification
 
   @Negative_case
-  Scenario: user want to buy a product with add string character price
+  Scenario: user want to buy a product with string character on price
     Given user already login
     And user aready on the homepage
     When user click a product
