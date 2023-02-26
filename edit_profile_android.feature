@@ -8,7 +8,7 @@ Feature: Edit Profile Mobile App Secondhand
         And User can see detail information of Profile User
         And User input Name
         And User taps Simpan button
-        Then User can see the success message
+        Then User can see the success notification
 
     @negative_case
     Scenario: User want to empty Nama fields
@@ -34,8 +34,8 @@ Feature: Edit Profile Mobile App Secondhand
         Examples:
 
         |      case_id    |              condition                  |
-        |TC.Prof.003.003  | input one number                        |
-        |TC.Prof.003.004  | input alphabets and special character   |
+        | AEP03           | input one number                        |
+        | AEP04           | input alphabets and special character   |
 
     @negative_case
     Scenario: User want to change Password with input the Wrong Old Password
@@ -47,4 +47,4 @@ Feature: Edit Profile Mobile App Secondhand
         And User input new password
         And User input new password for confirmation
         And User taps Simpan button
-        Then User can see the failed message
+        Then User can see the failed notification

@@ -12,7 +12,7 @@ Feature: Edit Profile Website App Secondhand
         And User input Address
         And User input Mobile Number
         And User click Submit button
-        Then User can see the success message
+        Then User can see the success notification
 
     @negative_case
     Scenario Outline: User want to empty Name
@@ -45,6 +45,6 @@ Feature: Edit Profile Website App Secondhand
         Examples:
 
         |      case_id     |                condition               |
-        |TC.Edpro.003.003  | empty field                            |
-        |TC.Edpro.003.004  | input one number                       |
-        |TC. Edpro.003.005 | input alphabets and special character  |
+        | WEP03            | empty field                            |
+        | WEP04            | input one number                       |
+        | WEP05            | input alphabets and special character  |
