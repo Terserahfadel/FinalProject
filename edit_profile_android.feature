@@ -1,44 +1,24 @@
 Feature: Edit Profile Mobile App Secondhand
 
-    @positive_case
-    Scenario: User want to change Name
+    Scenario Outline: User can success and failed do the Edit Profile process
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User taps the Pencil icon
         And User can see detail information of Profile User
-        And User input Name
+        And User input Name with "<Name>"
+        And User input Mobile Number "<Mobile_Number>"
         And User taps Simpan button
-        Then User can see the success notification
-
-    @negative_case
-    Scenario: User want to empty Nama fields
-        Given User already Login on Secondhand Mobile App
-        And User already in Akun Saya page
-        When User taps the Pencil icon
-        And User can see detail information of Profile User
-        And User empty Name field
-        And User taps Simpan button
-        Then User can see the failed validation
-
-
-    @negative_case
-    Scenario Outline: User want to change Mobile Number 
-        Given User already Login on Secondhand Mobile App
-        And User already in Akun Saya page
-        When User taps the Pencil icon
-        And User can see detail information of Profile User
-        And User input Mobile Number with "<condition>"
-        And User taps Simpan button
-        Then User can see the failed validation
+        Then User can see the success notification "<Notification>"
 
         Examples:
 
-        |      case_id    |              condition                  |
-        | AEP03           | input one number                        |
-        | AEP04           | input alphabets and special character   |
+        |      case_id     |     Name     |           Mobile_Number         |    Notification   |
+        | AEP01            | valid name   | correct mobile number           | success           |
+        | AEP02            | empty name   | correct mobile number           | failed            |
+        | AEP03            | valid name   | one number                      | failed            |
+        | AEP04            | valid name   | alphabets and special character | failed            |
 
-    @negative_case
-    Scenario: User want to change Password with input the Wrong Old Password
+    Scenario: User can failed do the Edit Password process
         Given User already Login on Secondhand Mobile App
         And User already in Akun Saya page
         When User click the Pencil icon
