@@ -1,23 +1,6 @@
 Feature: Register
 
-@Positive_case
-  Scenario: user want to register
-    Given user already launch the app and is in the homepage
-    When user taps on Akun menu
-    And user taps on Login button
-    And user taps on Register option
-    And user input data into Name fields
-    And user input data into E-mail fields
-    And user input data into Password fields
-    And user input data into Phone Number fields
-    And user input data into City fields
-    And user input data into Address fields
-    And user taps on Register button
-    Then user can see account created successfully
-    And user redirected to account page
-
-@Negative_case
-  Scenario Outline: User cannot register  
+  Scenario Outline: User can success and failed do the register provess  
     Given user already launch the app and is in the homepage
     When user taps on Akun menu
     And user taps on Login button
@@ -29,11 +12,12 @@ Feature: Register
     And user input data into City fields
     And user input fata into Address fields
     And user taps on Register button
-    Then user can see account should not be created, warning message should be displayed
+    Then user can see "<Notification>"
    
     Examples:
-    | Case ID | Email                     | Password       | Phone_Number       |
-    | AR02    | That have been registered | Valid password | Valid phone number |
-    | AR03    | Invalid email parameter   | Valid password | Valid phone number |
-    | AR04    | Valid email               | Empty password | Valid phone number |
-    | AR05    | Valid email               | Valid password | Special characters |
+    | Case ID | Email                     | Password       | Phone_Number       | Notification     |
+    | AR01    | Correct email             | Correct password | Correct phone number | Register success | 
+    | AR02    | Registered email          | Correct password | Correct phone number | Register failed  | 
+    | AR03    | Incorrect email parameter | Correct password | Correct phone number | Register failed  |
+    | AR04    | Correct email             | Empty password   | Correct phone number | Register failed  |
+    | AR05    | Correct email             | Correct password | Special characters   | Register failed  |
