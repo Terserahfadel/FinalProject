@@ -32,6 +32,7 @@ Feature: Add Product
         And user can see warning above the wrong input field
         Examples:
         | case ID | product_name          | product_price         |
+        | AAP01   | valid product name    | valid price
         | AAP02   | special character     | valid price           |
         | AAP03   | valid product name    | negative number       |
         | AAP04   | empty                 | valid price           |
