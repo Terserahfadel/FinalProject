@@ -5,12 +5,12 @@ Feature: Register
     When user taps on Akun menu
     And user taps on Login button
     And user taps on Register option
-    And user input data into Name fields
+    And user "Yulia" into Name fields
     And user input data into E-mail fields with "<Email>"
     And user input data into Password fields with "<Password>"
     And user input data into Phone Number fields with "<Phone_Number>"
-    And user input data into City fields
-    And user input fata into Address fields
+    And user "Jakarta" into City fields
+    And user "Tebet" into Address fields
     And user taps on Register button
     Then user can see the "<Result>" Notification
 
