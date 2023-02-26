@@ -1,6 +1,6 @@
 Feature: Register
 
-  Scenario Outline: User can success and failed do the register provess  
+  Scenario Outline: User can success and failed do the register process  
     Given user already launch the app and is in the homepage
     When user taps on Akun menu
     And user taps on Login button

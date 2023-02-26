@@ -1,6 +1,6 @@
 Feature: Register
 
-  Scenario Outline: User can success and failed do the register provess
+  Scenario Outline: User can success and failed do the register process
     Given user already open the website and is in the homepage
     When user click on Login menu
     And user click on Register here option
