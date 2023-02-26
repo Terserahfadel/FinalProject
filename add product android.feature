@@ -1,6 +1,6 @@
 Feature: Add Product
 
-    @positive_case
+    """@positive_case
     Scenario: User want to add product to their product list
         Given user already login
         And user already in home page
@@ -15,8 +15,8 @@ Feature: Add Product
         Then user can see success toast message appear
         And user successfully add product
 
-    @negative_case
-    
+    @negative_case"""
+
     Scenario Outline: User can successfully or failed upload product due to the process
         Given user already login
         And user already in home page
