@@ -13,7 +13,7 @@ Feature: Register
     And a confirm email should be send to the registered email address
 
 @Negative_case
-  Scenario Outline: User want to register using account that have been registered
+  Scenario Outline: User cannot register
     Given user already open the website and is in the homepage
     When user click on Login menu
     And user click on Register here option

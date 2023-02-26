@@ -17,7 +17,7 @@ Feature: Register
     And user redirected to account page
 
 @Negative_case
-  Scenario Outline: User want to register using 
+  Scenario Outline: User cannot register  
     Given user already launch the app and is in the homepage
     When user taps on Akun menu
     And user taps on Login button
@@ -32,8 +32,8 @@ Feature: Register
     Then user can see account should not be created, warning message should be displayed
    
     Examples:
-        | Case ID | Email                     | Password       | Phone_Number       |
-        | AR02    | That have been registered | Valid password | Valid phone number |
-        | AR03    | Invalid email parameter   | Valid password | Valid phone number |
-        | AR04    | Valid email               | Empty password | Valid phone number |
-        | AR05    | Valid email               | Valid password | Special characters |
+    | Case ID | Email                     | Password       | Phone_Number       |
+    | AR02    | That have been registered | Valid password | Valid phone number |
+    | AR03    | Invalid email parameter   | Valid password | Valid phone number |
+    | AR04    | Valid email               | Empty password | Valid phone number |
+    | AR05    | Valid email               | Valid password | Special characters |
