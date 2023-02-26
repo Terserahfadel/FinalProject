@@ -7,7 +7,7 @@ Feature: Register
     And user click on Register here option
     And user input data into Name fields 
     And user input data into Email fields 
-    And input data into Password fields 
+    And user input data into Password fields 
     And user click on Register button 
     Then user can see account created successfully 
     And a confirm email should be send to the registered email address
@@ -19,7 +19,7 @@ Feature: Register
     And user click on Register here option
     And user input data into Name fields 
     And user input data into Email fields with "<Email>"
-    And input data into Password fields with "<Password>"
+    And user input data into Password fields with "<Password>"
     And user click on Register button 
     Then user can see account should not be created, warning message should be displayed
 

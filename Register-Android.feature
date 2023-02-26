@@ -11,7 +11,7 @@ Feature: Register
     And user input data into Password fields
     And user input data into Phone Number fields
     And user input data into City fields
-    And user input fata into Address fields
+    And user input data into Address fields
     And user taps on Register button
     Then user can see account created successfully
     And user redirected to account page
