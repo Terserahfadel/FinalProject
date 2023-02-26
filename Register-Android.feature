@@ -8,14 +8,14 @@ Feature: Register
     And user input data into Name fields
     And user input data into E-mail fields with "<Email>"
     And user input data into Password fields with "<Password>"
-    And user input data into Phone Number fields with "<Phone_Number>"
+    And user input data into Phone Number fields with "<Phone Number>"
     And user input data into City fields
     And user input fata into Address fields
     And user taps on Register button
     Then user can see "<Notification>"
    
     Examples:
-    | Case ID | Email                     | Password       | Phone_Number           | Notification     |
+    | Case ID | Email                     | Password         | Phone Number           | Notification     |
     | AR01    | Correct email             | Correct password | Correct phone number | Register success | 
     | AR02    | Registered email          | Correct password | Correct phone number | Register failed  | 
     | AR03    | Incorrect email parameter | Correct password | Correct phone number | Register failed  |
