@@ -15,7 +15,7 @@ Feature: Register
     Then user can see "<Notification>"
    
     Examples:
-    | Case ID | Email                     | Password       | Phone_Number       | Notification     |
+    | Case ID | Email                     | Password       | Phone_Number           | Notification     |
     | AR01    | Correct email             | Correct password | Correct phone number | Register success | 
     | AR02    | Registered email          | Correct password | Correct phone number | Register failed  | 
     | AR03    | Incorrect email parameter | Correct password | Correct phone number | Register failed  |
