@@ -17,7 +17,7 @@ Feature: Register
     And the page should be "<Page>"
     Examples:
       | Case_ID | Email                | Password       | Phone_Number       | Result          | Page                       |
-      |  AR01   | Valid email         | Valid password | Valid phone number | Success massage | Redirected to account page |
+      | AR01    | Valid email          | Valid password | Valid phone number | Success massage | Redirected to account page |
       | AR02    | Registered email     | Valid password | Valid phone number | Failed massage  | Stay in register page      |
       | AR03    | Invalid email format | Valid password | Valid phone number | Failed massage  | Stay in register page      |
       | AR04    | Valid email          | Empty password | Valid phone number | Failed massage  | Stay in register page      |
