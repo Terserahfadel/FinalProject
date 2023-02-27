@@ -14,7 +14,6 @@ Feature: Register
     And user taps on Register button
     Then user can see the "<Result>" notification
     And the page should be "<Page>"
-
     Examples:
     | Case_ID | Email                | Password       | Phone_Number       | Result          | Page                       |
     | AR01    | Valid email          | Valid password | Valid phone number | Success massage | Redirected to account page |
