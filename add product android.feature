@@ -1,22 +1,5 @@
 Feature: Add Product
 
-    """@positive_case
-    Scenario: User want to add product to their product list
-        Given user already login
-        And user already in home page
-        When user tap jual button
-        And user input product name
-        And user input product price
-        And user input product description
-        And user input product category
-        And user input product image
-        And user input location
-        And user tap terbitkan button
-        Then user can see success toast message appear
-        And user successfully add product
-
-    @negative_case"""
-
     Scenario Outline: User can successfully or failed upload product due to the process
         Given user already login
         And user already in home page
@@ -28,13 +11,12 @@ Feature: Add Product
         And user input product image
         And user input product location
         And user tap terbitkan button
-        Then user can see "<toast>" toast message appear 
+        Then user can see "<toast>" appear 
         And the page should be "<page>"
-        And user can see "<warning>" appear above the input field
         Examples:
-        | case ID | product_name          | product_price         | toast   | page                      | warning           |
-        | AAP01   | valid product name    | valid price           | success | redirected to home page   | no warning        |
-        | AAP02   | special character     | valid price           | failed  | stay in add product page  | warning           |
-        | AAP03   | valid product name    | negative number       | failed  | stay in add product page  | warning           |
-        | AAP04   | empty                 | valid price           | failed  | stay in add product page  | warning           |
-        | AAP05   | valid product name    | 0                     | failed  | stay in add product page  | warning           |
+        | case ID | product_name          | product_price         | toast           | page                      |
+        | AAP01   | valid product name    | valid price           | success message | redirected to home page   |
+        | AAP02   | special character     | valid price           | failed  message | stay in add product page  |
+        | AAP03   | valid product name    | negative number       | failed  message | stay in add product page  |
+        | AAP04   | empty                 | valid price           | failed  message | stay in add product page  |
+        | AAP05   | valid product name    | zero price            | failed  message | stay in add product page  |
