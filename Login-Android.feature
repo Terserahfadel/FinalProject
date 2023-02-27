@@ -6,8 +6,8 @@ Feature: Login
         And User has "<Condition>" Account
         When User click on the Account button
         And User click on the Login button
-        And User input "<Email>"
-        And User input "<Password>"
+        And User input "<Email>" in email field
+        And User input "<Password>" in password field
         And User click on the Login button
         Then User can see login "<Notification>"
         And User "<Expected>" 
