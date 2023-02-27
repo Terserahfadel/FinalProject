@@ -5,12 +5,12 @@ Feature: Register
     When user taps on Account menu
     And user taps on Login button
     And user taps on Register option
-    And user "Yulia" into Name fields
-    And user input data into E-mail fields with "<Email>"
-    And user input data into Password fields with "<Password>"
-    And user input data into Phone Number fields with "<Phone_Number>"
-    And user "Jakarta" into City fields
-    And user "Tebet" into Address fields
+    And user input data into Name fields
+    And user input "<Email>" into Email fields 
+    And user input "<Password>" into Password fields
+    And user input "<Phone_Number>" into Phone Number fields 
+    And user input data into City fields
+    And user input data into Address fields
     And user taps on Register button
     Then user can see the "<Result>" notification
     And the page should be "<Page>"

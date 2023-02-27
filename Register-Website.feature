@@ -4,9 +4,9 @@ Feature: Register
     Given user already open the website and is in the homepage
     When user click on Login menu
     And user click on Register here option
-    And user "Kristi" into Name fields 
-    And user input data into Email fields with "<Email>"
-    And user input data into Password fields with "<Password>"
+    And user input data into Name fields 
+    And user input "<Email>" into Email fields  
+    And user input "<Password>" into Password fields  
     And user click on Register button 
     Then user can see "<Result>" notification
     And the page should be "<Page>"
