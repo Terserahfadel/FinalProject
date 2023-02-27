@@ -9,12 +9,11 @@ Feature: Register
     And user input "<Password>" into Password fields  
     And user click on Register button 
     Then user can see "<Result>" notification
-    And the page should be "<Page>"
-
+    And the page should be stay in register page
     Examples:
-    | Case_ID | Email                | Password       | Result          | Page                  |
-    | WR01    | Valid email          | Valid password | Success massage | Stay in register page |
-    | WR02    | Registered email     | Valid password | Failed massage  | Stay in register page |
-    | WR03    | Invalid email format | Valid password | Failed massage  | Stay in register page |
-    | WR04    | Valid email          | Empty password | Failed massage  | Stay in register page |
-    | WR05    | Special character    | Valid password | Failed massage  | Stay in register page |
+    | Case_ID | Email                | Password       | Result          |
+    | WR01    | Valid email          | Valid password | Success message |
+    | WR02    | Registered email     | Valid password | Failed message  |
+    | WR03    | Invalid email format | Valid password | Failed message  |
+    | WR04    | Valid email          | Empty password | Failed message  |
+    | WR05    | Special character    | Valid password | Failed message  |
