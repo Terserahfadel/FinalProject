@@ -10,7 +10,7 @@ Feature: Edit Profile Mobile App Secondhand
         And User taps Simpan button
         Then User can see the Message "<Message>"
         Examples:
-        |      case_id     |        Name       |           Mobile_Number           |    Message   |
+        |      case_id     |        Name       |           Mobile_Number           |        Message    |
         | AEP01            | valid name        | valid mobile number               | success message   |
         | AEP02            | empty name        | valid mobile number               | failed message    |
         | AEP03            | valid name        | one number                        | failed message    |
