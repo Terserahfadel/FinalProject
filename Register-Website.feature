@@ -12,7 +12,7 @@ Feature: Register
     Then user can see "<Result>" notification
     And the page should be stay in register page
     Examples:
-    | Case_ID  | Email                 | Password       | Result          |
+      | Case_ID | Email                | Password       | Result          |
       | WR01    | Valid email          | Valid password | Success message |
       | WR02    | Registered email     | Valid password | Failed message  |
       | WR03    | Invalid email format | Valid password | Failed message  |
