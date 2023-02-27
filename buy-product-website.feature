@@ -10,10 +10,10 @@ Feature: Buying product
     Then user can see "<Result>" notification
 
     Examples: 
-      | Case ID | Price            | Result  |
-      | WB01    | Valid price      | Success |
-      | WB04    | zero price       | Failed  |
-      | WB05    | String character | Failed  |
+      | Case ID | Price            | Result          |
+      | WB01    | Valid price      | Success message |
+      | WB04    | zero price       | Failed message  |
+      | WB05    | String character | Failed message  |
 
   @Negative_case
   Scenario: user want to buy a product with incomplete data
