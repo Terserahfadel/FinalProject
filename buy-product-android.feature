@@ -10,11 +10,11 @@ Feature: Buying product
     Then user can see "<Result>" notification
 
     Examples: 
-      | Case ID | Price            | Result  |
-      | AB01    | Valid price      | Success |
-      | AB02    | empty            | Failed  |
-      | AB04    | zero price       | Failed  |
-      | AB05    | string character | Failed  |
+      | Case ID | Price            | Result          |
+      | AB01    | Valid price      | Success message |
+      | AB02    | empty            | Failed message  |
+      | AB04    | zero price       | Failed message  |
+      | AB05    | string character | Failed message  |
 
   @Negative_case
   Scenario: user want to buy a product without input price
