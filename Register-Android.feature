@@ -1,4 +1,5 @@
 Feature: Register
+
   Scenario Outline: User can success or failed due the register process  
     Given user already open the website 
     And user already in the homepage
