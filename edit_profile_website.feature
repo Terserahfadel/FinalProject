@@ -15,9 +15,9 @@ Feature: Edit Profile Website App Secondhand
 
         Examples:
 
-        |      case_id     |     Name     |           Mobile_Number         |    Notification   |
-        | WEP01            | valid name   | "08899776655"                   | success           |
-        | WEP02            | empty name   | "08899776655"                   | failed            |
-        | WEP03            | valid name   | empty mobile number             | failed            |
-        | WEP04            | valid name   | "3"                             | failed            |
-        | WEP05            | valid name   | "abc!!@@##$$%%^^"               | failed            |
+        |      case_id     |     Name     |           Mobile_Number             |    Notification   |
+        | WEP01            | valid name   | valid mobile number                 | success           |
+        | WEP02            | empty name   | valid mobile number                 | failed            |
+        | WEP03            | valid name   | empty mobile number                 | failed            |
+        | WEP04            | valid name   | one number                          | failed            |
+        | WEP05            | valid name   | alphabets and special character     | failed            |

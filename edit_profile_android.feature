@@ -12,11 +12,11 @@ Feature: Edit Profile Mobile App Secondhand
 
         Examples:
 
-        |      case_id     |        Name       |           Mobile_Number         |    Notification   |
-        | AEP01            | valid name        | "081888888999"                  | success           |
-        | AEP02            | empty name        | "081888888999"                  | failed            |
-        | AEP03            | valid name        | "3"                             | failed            |
-        | AEP04            | valid name        | "abc!!@@##$$%%^^"               | failed            |
+        |      case_id     |        Name       |           Mobile_Number           |    Notification   |
+        | AEP01            | valid name        | valid mobile number               | success           |
+        | AEP02            | empty name        | valid mobile number               | failed            |
+        | AEP03            | valid name        | one number                        | failed            |
+        | AEP04            | valid name        | alphabets and special character   | failed            |
 
     Scenario: User want to change Password with input wrong Old Password
         Given User already Login on Secondhand Mobile App
