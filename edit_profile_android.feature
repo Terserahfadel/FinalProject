@@ -5,8 +5,8 @@ Feature: Edit Profile Mobile App Secondhand
         And User already in Akun Saya page
         When User taps the Pencil icon
         And User can see detail information of Profile User
-        And User input Name with "<Name>"
-        And User input Mobile Number "<Mobile_Number>"
+        And User input "<Name>" into Name field
+        And User input "<Mobile_Number>" into Mobile Number field
         And User taps Simpan button
         Then User can see the Message "<Message>"
         Examples:
