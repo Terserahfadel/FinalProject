@@ -1,6 +1,6 @@
 Feature: Add Product
 
-    Scenario Outline: User can successfully or failed upload product due to the process
+    Scenario Outline: User can successfully or failed upload product depends on the process
         Given user already login
         And user already in home page
         When user click jual button
