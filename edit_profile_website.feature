@@ -12,9 +12,7 @@ Feature: Edit Profile Website App Secondhand
         And User input Mobile Number with "<Mobile_Number>"
         And User click Submit button
         Then User can see the Message "<Message>"
-
         Examples:
-
         |      case_id     |     Name     |           Mobile_Number             |    Message        | 
         | WEP01            | valid name   | valid mobile number                 | success message   |
         | WEP02            | empty name   | valid mobile number                 | failed message    |
