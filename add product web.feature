@@ -18,4 +18,4 @@ Feature: Add Product
         | WAP02   | special character     | valid price           | failed  message | stay in add product page  |
         | WAP03   | valid product name    | negative number       | failed  message | stay in add product page  |
         | WAP04   | empty                 | valid price           | failed  message | stay in add product page  |
-        | WAP05   | valid product name    | 0                     | failed  message | stay in add product page  |
+        | WAP05   | valid product name    | zero price            | failed  message | stay in add product page  |
