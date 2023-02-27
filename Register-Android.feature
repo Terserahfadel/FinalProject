@@ -2,16 +2,16 @@ Feature: Register
   Scenario Outline: User can success or failed due the register process  
     Given user already open the website 
     And user already in the homepage
-    When user tap on Account menu
-    And user tap on Login button
-    And user tap on Register option
+    When user tap on Akun menu
+    And user tap on Masuk button
+    And user tap on Daftar disini option
     And user input data into Name field
     And user input "<Email>" into Email field
     And user input "<Password>" into Password field
     And user input "<Phone_Number>" into Phone Number field
     And user input data into City field
     And user input data into Address field
-    And user tap on Register button
+    And user tap on Daftar button
     Then user can see the "<Result>" notification
     And the page should be "<Page>"
     Examples:
