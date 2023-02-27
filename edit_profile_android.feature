@@ -8,15 +8,15 @@ Feature: Edit Profile Mobile App Secondhand
         And User input Name with "<Name>"
         And User input Mobile Number "<Mobile_Number>"
         And User taps Simpan button
-        Then User can see the notification "<Notification>"
+        Then User can see the Message "<Message>"
 
         Examples:
 
         |      case_id     |        Name       |           Mobile_Number           |    Notification   |
-        | AEP01            | valid name        | valid mobile number               | success           |
-        | AEP02            | empty name        | valid mobile number               | failed            |
-        | AEP03            | valid name        | one number                        | failed            |
-        | AEP04            | valid name        | alphabets and special character   | failed            |
+        | AEP01            | valid name        | valid mobile number               | success message   |
+        | AEP02            | empty name        | valid mobile number               | failed message    |
+        | AEP03            | valid name        | one number                        | failed message    |
+        | AEP04            | valid name        | alphabets and special character   | failed message    |
 
     Scenario: User want to change Password with input wrong Old Password
         Given User already Login on Secondhand Mobile App

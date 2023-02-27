@@ -11,13 +11,13 @@ Feature: Edit Profile Website App Secondhand
         And User input "Highway" into Address field
         And User input Mobile Number with "<Mobile_Number>"
         And User click Submit button
-        Then User can see the notification "<Notification>"
+        Then User can see the Message "<Message>"
 
         Examples:
 
-        |      case_id     |     Name     |           Mobile_Number             |    Notification   |
-        | WEP01            | valid name   | valid mobile number                 | success           |
-        | WEP02            | empty name   | valid mobile number                 | failed            |
-        | WEP03            | valid name   | empty mobile number                 | failed            |
-        | WEP04            | valid name   | one number                          | failed            |
-        | WEP05            | valid name   | alphabets and special character     | failed            |
+        |      case_id     |     Name     |           Mobile_Number             |    Message        | 
+        | WEP01            | valid name   | valid mobile number                 | success message   |
+        | WEP02            | empty name   | valid mobile number                 | failed message    |
+        | WEP03            | valid name   | empty mobile number                 | failed message    |
+        | WEP04            | valid name   | one number                          | failed message    |
+        | WEP05            | valid name   | alphabets and special character     | failed message    |
