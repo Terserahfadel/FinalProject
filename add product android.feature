@@ -4,12 +4,12 @@ Feature: Add Product
         Given user already login
         And user already in home page
         When user tap jual button
-        And user input product name with "<product_name>"
-        And user input product price with "<product_price>"
-        And user input product description
-        And user input product category
-        And user input product image
-        And user input product location
+        And user input product name with "<product_name>" into nama produk field
+        And user input product price with "<product_price>" into harga produk field
+        And user input product description into deskripsi field
+        And user select product category in kategori drop down
+        And user insert product image in foto produk button
+        And user input product location into lokasi field
         And user tap terbitkan button
         Then user can see "<toast>" appear 
         And the page should be "<page>"
