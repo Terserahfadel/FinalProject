@@ -5,9 +5,9 @@ Feature: Register
     And user already in the homepage
     When user click on Login menu
     And user click on Register here option
-    And user input data into Name fields 
-    And user input "<Email>" into Email fields  
-    And user input "<Password>" into Password fields  
+    And user input data into Name field
+    And user input "<Email>" into Email field
+    And user input "<Password>" into Password field
     And user click on Register button 
     Then user can see "<Result>" notification
     And the page should be stay in register page
