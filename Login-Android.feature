@@ -4,11 +4,11 @@ Feature: Login
         Given User has launched Apps
         And User at Homepage
         And User has "<Condition>" Account
-        When User click on the Account button
-        And User click on the Login button
+        When User tap on the Account button
+        And User tap on the Login button
         And User input "<Email>" in email field
         And User input "<Password>" in password field
-        And User click on the Login button
+        And User tap on the Login button
         Then User can see login "<Notification>"
         And User "<Expected>" 
         Examples:
