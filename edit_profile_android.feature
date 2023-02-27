@@ -9,9 +9,7 @@ Feature: Edit Profile Mobile App Secondhand
         And User input Mobile Number "<Mobile_Number>"
         And User taps Simpan button
         Then User can see the Message "<Message>"
-
         Examples:
-
         |      case_id     |        Name       |           Mobile_Number           |    Message   |
         | AEP01            | valid name        | valid mobile number               | success message   |
         | AEP02            | empty name        | valid mobile number               | failed message    |
