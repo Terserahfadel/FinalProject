@@ -6,10 +6,10 @@ Feature: Edit Profile Website App Secondhand
         When User click the Profile icon
         And User click Profile menu
         And User can see Profile form
-        And User input Name with "<Name>"
+        And User input "<Name>" Name field
         And User input "Samarinda" into City field
         And User input "Highway" into Address field
-        And User input Mobile Number with "<Mobile_Number>"
+        And User input "<Mobile_Number>" field
         And User click Submit button
         Then User can see the Message "<Message>"
         Examples:
