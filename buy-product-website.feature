@@ -10,9 +10,9 @@ Feature: Buying product
     Then user can see "<Result>" notification
 
     Examples: 
-      | Case ID | price            | Result  |
+      | Case ID | Price            | Result  |
       | WB01    | Valid price      | Success |
-      | WB04    | "0"              | Failed  |
+      | WB04    | zero price       | Failed  |
       | WB05    | String character | Failed  |
 
   @Negative_case
