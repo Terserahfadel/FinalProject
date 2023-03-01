@@ -17,11 +17,15 @@ Feature: Buying product
       | AB05    | string character | Failed message  |
 
   @Negative_case
-  Scenario: user want to buy a product without input price
+  Scenario: user want to buy same product twice
     Given user already login
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
-    And user left input price empty
+    And user input price on price field
     And user tap Kirim button
+    And user can see success notification
+    And user tap again same product
+    And user input price on price field
+    And user tap kirim button
     Then user can see failed notification
