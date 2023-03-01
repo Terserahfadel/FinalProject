@@ -1,7 +1,7 @@
 Feature: Buying product
 
   Scenario Outline: user can see success and failed due to buying process
-    Given user already login
+    Given user already login with "<Profile>"
     And user aready on the homepage
     When user click a product
     And user click Saya tertarik dan ingin nego button
@@ -10,20 +10,11 @@ Feature: Buying product
     Then user can see "<Result>" notification
 
     Examples: 
-      | Case ID | Price            | Result          |
-      | WB01    | Valid price      | Success message |
-      | WB04    | zero price       | Failed message  |
-      | WB05    | String character | Failed message  |
-
-  @Negative_case
-  Scenario: user want to buy a product with incomplete data
-    Given user already login
-    And user aready on the homepage
-    When user click a product
-    And user click Saya tertarik dan ingin nego button
-    And user input price
-    And user click Kirim button
-    Then user can see failed notification
+      | Case ID | Profile                 | Price            | Result          |
+      | WB01    | Profile data complete   | Valid price      | Success message |
+      | WB02    | Profile data incomplete | Valid price      | Failed message  |
+      | WB04    | Profile data complete   | zero price       | Failed message  |
+      | WB05    | Profile data complete   | String character | Failed message  |
 
   @Negative_case
   Scenario: user want to buy a product twice
@@ -36,4 +27,4 @@ Feature: Buying product
     And user click again Saya tertarik dan ingin nego button
     And user input price
     And user click kirim button
-    Then user can see failed notification
+    Then user can see failed message notification
