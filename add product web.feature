@@ -11,7 +11,7 @@ Feature: Add Product
         And user insert product image in foto produk button
         And user click terbitkan button
         Then user can see "<toast>" appear 
-        And the page should be "<page>"
+        And user redirected to "<page>"
         Examples:
         | case ID | product_name          | product_price         | toast           |  page              |
         | WAP01   | valid product name    | valid price           | success message |  home page         |
