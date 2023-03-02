@@ -13,9 +13,9 @@ Feature: Add Product
         Then user can see "<toast>" appear 
         And the page should be "<page>"
         Examples:
-        | case ID | product_name          | product_price         | toast           | page                      |
-        | WAP01   | valid product name    | valid price           | success message | redirected to home page   |
-        | WAP02   | special character     | valid price           | failed  message | stay in add product page  |
-        | WAP03   | valid product name    | negative number       | failed  message | stay in add product page  |
-        | WAP04   | empty                 | valid price           | failed  message | stay in add product page  |
-        | WAP05   | valid product name    | zero price            | failed  message | stay in add product page  |
+        | case ID | product_name          | product_price         | toast           |  page              |
+        | WAP01   | valid product name    | valid price           | success message |  home page         |
+        | WAP02   | special character     | valid price           | failed  message |  add product page  |
+        | WAP03   | valid product name    | negative number       | failed  message |  add product page  |
+        | WAP04   | empty                 | valid price           | failed  message |  add product page  |
+        | WAP05   | valid product name    | zero price            | failed  message |  add product page  |

@@ -12,11 +12,11 @@ Feature: Add Product
         And user input product location into lokasi field
         And user tap terbitkan button
         Then user can see "<toast>" appear 
-        And the page should be "<page>"
+        And user redirected to "<page>"
         Examples:
-        | case ID | product_name          | product_price         | toast           | page                      |
-        | AAP01   | valid product name    | valid price           | success message | redirected to home page   |
-        | AAP02   | special character     | valid price           | failed  message | stay in add product page  |
-        | AAP03   | valid product name    | negative number       | failed  message | stay in add product page  |
-        | AAP04   | empty                 | valid price           | failed  message | stay in add product page  |
-        | AAP05   | valid product name    | zero price            | failed  message | stay in add product page  |
+        | case ID | product_name          | product_price         | toast           |  page              |
+        | AAP01   | valid product name    | valid price           | success message |  home page         |
+        | AAP02   | special character     | valid price           | failed  message |  add product page  |
+        | AAP03   | valid product name    | negative number       | failed  message |  add product page  |
+        | AAP04   | empty                 | valid price           | failed  message |  add product page  |
+        | AAP05   | valid product name    | zero price            | failed  message |  add product page  |
