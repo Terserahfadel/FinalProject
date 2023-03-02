@@ -5,7 +5,7 @@ Feature: Buying product
     And user aready on the homepage
     When user tap a product
     And user tap Saya tertarik dan ingin nego button
-    And user input "<Price>"
+    And user input "<Price>" into price field
     And user tap Kirim button
     Then user can see "<Result>" notification
 
